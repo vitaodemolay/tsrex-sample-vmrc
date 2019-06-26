@@ -3,20 +3,19 @@ import { Provider } from 'exredux';
 import { appModels } from './AppModels';
 import { MsgContainer } from './msg/MsgContainer';
 import { CounterContainer } from './counter/CounterContainer';
+import { Container, Row, Col, Jumbotron } from 'react-bootstrap'
+import TopPage from './toppage/toppage';
 
 class App extends React.Component {
   render() {
     return (
       <Provider modelStore={appModels}>
-        <div>
-          <h1>Teste de React com TSREx</h1>
-          <p>Testing TSREx</p>
-          <p>VMRC...</p>
-          <hr />
+        <Container>
+          <TopPage />
           <CounterContainer />
           <hr />
           <MsgContainer />
-        </div>
+        </Container>
       </Provider>
     );
   }
