@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Provider } from 'exredux';
 import { appModels } from './AppModels';
-import { MsgContainer } from './msg/MsgContainer';
-import { CounterContainer } from './counter/CounterContainer';
-import { Container, Row, Col, Jumbotron } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import TopPage from './toppage/toppage';
+import { Routes } from './routes/RoutesContainer';
+import Menu from './menu/MenuComponent';
 
 class App extends React.Component {
   render() {
@@ -12,9 +12,8 @@ class App extends React.Component {
       <Provider modelStore={appModels}>
         <Container>
           <TopPage />
-          <CounterContainer />
-          <hr />
-          <MsgContainer />
+          <Menu />
+          <Routes />
         </Container>
       </Provider>
     );

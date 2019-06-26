@@ -16,9 +16,11 @@ class ModelProps {
 )
 export class MsgContainer extends React.Component<Partial<ModelProps>> {
     render() {
-        
-        return <div>
-            <MsgComponent model={this.props.msgModel}/>
-        </div>
+
+        return (
+            <div>
+                <MsgComponent model={this.props.msgModel} />
+            </div>
+        );
     }
 }

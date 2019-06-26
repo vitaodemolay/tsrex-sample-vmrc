@@ -16,9 +16,11 @@ class ModelProps {
 )
 export class CounterContainer extends React.Component<Partial<ModelProps>> {
     render() {
-        
-        return <div>
-            <CounterComponent model={this.props.counterModel}/>
-        </div>
+
+        return (
+            <div>
+                <CounterComponent model={this.props.counterModel} />
+            </div>
+        );
     }
 }
